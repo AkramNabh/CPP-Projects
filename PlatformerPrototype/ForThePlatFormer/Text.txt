@@ -1,0 +1,67 @@
+
+
+alright, now surprisingly i came up with this great idea to kill the rendering time and making the code much more managable
+where i will use maps alot in texturing, and the plan goes like, 
+i will make a map to input the textures sheets, since i wont be using one sheet, each sheet will have a key,
+then i will make another map for sprites, and each sprite will render a specific texture sheet, and then i will be able
+to crop the way i want from multiple texture sheets, instead of merging multiple sheets and trying to coordinate the right 
+frame.
+
+guess this will be a good idea to follow up with, multiple maps, much more user-friendly, and much more easier to access
+
+
+
+
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#include <map>
+#include <vector>
+
+int main()
+{
+    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
+
+    // Create a map of textures
+    std::map<std::string, sf::Texture> textures;
+    if (!textures["texture1"].loadFromFile("texture1.png"))
+    {
+        std::cout << "Failed to load texture1\n";
+        return -1;
+    }
+    if (!textures["texture2"].loadFromFile("texture2.png"))
+    {
+        std::cout << "Failed to load texture2\n";
+        return -1;
+    }
+
+    // Create a vector of sprites
+    std::vector<sf::Sprite> sprites;
+    sprites.push_back(sf::Sprite(textures["texture1"]));
+    sprites[0].setPosition(100, 100);
+    sprites.push_back(sf::Sprite(textures["texture2"]));
+    sprites[1].setPosition(200, 200);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+            {
+                window.close();
+            }
+        }
+
+        window.clear(sf::Color::White);
+
+        // Draw each sprite
+        for (const auto& sprite : sprites)
+        {
+            window.draw(sprite);
+        }
+
+        window.display();
+    }
+
+    return 0;
+}

@@ -1,0 +1,33 @@
+﻿  Player.cpp
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(119,36): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(121,32): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(132,35): warning C4244: '-=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(134,31): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(146,35): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(148,31): warning C4244: '=': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\Users\akram\source\repos\ForThePlatFormer\ForThePlatFormer\Player.cpp(200): warning C4172: returning address of local variable or temporary: animswitch
+  ForThePlatFormer.vcxproj -> C:\Users\akram\source\repos\ForThePlatFormer\Debug\ForThePlatFormer.exe
